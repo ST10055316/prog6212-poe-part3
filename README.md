@@ -1,32 +1,32 @@
-# Contract Monthly Claim System (CMCS) - PROG6212 Final POE
+Contract Monthly Claim System (CMCS) 
 
-## Project Overview
+Project Overview
 A comprehensive web-based system for managing monthly contract claims for lecturers at an educational institution. The system implements a multi-role workflow with HR management, lecturer claim submissions, and a two-tier approval process.
 
-## 🆕 Updates from Part 2 to Part 3
+Updates from Part 2 to Part 3
 
-### Based on Lecturer Feedback:
+Based on Lecturer Feedback:
 
-1. **HR Super User Role Implemented**
+1. HR Super User Role Implemented
    - HR can now create, edit, and manage all user accounts
    - HR sets hourly rates for all lecturers
    - Public registration completely disabled
    - All users must be created by HR department
 
-2. **Lecturer View Enhancements**
+2. Lecturer View Enhancements
    - Hourly rate automatically pulled from HR-set values
    - Auto-calculation of claim amounts (Hours × Rate)
    - Cannot manually edit hourly rate
    - Enhanced validation for 180-hour monthly maximum
    - Real-time calculation display
 
-3. **Session Management (PROG6212 Requirement)**
+3. Session Management 
    - Comprehensive session implementation throughout application
    - User data stored in sessions during login
    - Session validation on all protected pages
    - Role-specific session data
 
-4. **Authorization & Security**
+4. Authorization & Security
    - `[Authorize]` attributes on all controllers
    - Role-based access control implemented
    - Users cannot access unauthorized pages
@@ -38,14 +38,14 @@ A comprehensive web-based system for managing monthly contract claims for lectur
    - HTML reports downloadable
    - Department-wise breakdowns using LINQ GroupBy
 
-6. **Database & Entity Framework**
+6. Database & Entity Framework
    - EF Core with SQL Server
    - Code-First approach with automatic migrations
    - Database seeding with default users
 
-## 🎯 Key Features (Part 3)
+Key Features (Part 3)
 
-### HR Dashboard (Super User)
+HR Dashboard (Super User)
 - ✅ Create new users with all details (name, email, hourly rate, etc.)
 - ✅ Edit existing user information
 - ✅ Activate/deactivate user accounts
@@ -54,7 +54,7 @@ A comprehensive web-based system for managing monthly contract claims for lectur
 - ✅ Download reports (HTML format)
 - ✅ View system-wide statistics
 
-### Lecturer Features
+Lecturer Features
 - ✅ Auto-populated hourly rate from HR settings
 - ✅ Auto-calculation: Total = Hours × HR-set Rate
 - ✅ Maximum 180 hours per month validation
@@ -62,23 +62,23 @@ A comprehensive web-based system for managing monthly contract claims for lectur
 - ✅ View claim history and status
 - ✅ Upload supporting documents
 
-### Programme Coordinator Features
+Programme Coordinator Features
 - ✅ Review submitted claims
 - ✅ Approve/reject claims (first level)
 - ✅ Forward approved claims to Academic Manager
 - ✅ Session-based authentication
 
-### Academic Manager Features
+Academic Manager Features
 - ✅ Final approval of claims
 - ✅ View all approved claims
 - ✅ Generate reports
 - ✅ Session-based authentication
 
-## 🔐 Authentication & Authorization
+Authentication & Authorization
 
-### Session Implementation
-```csharp
-// Session data stored during login:
+Session Implementation
+csharp
+Session data stored during login:
 - CurrentUser (User ID)
 - UserName
 - UserRole
@@ -87,40 +87,40 @@ A comprehensive web-based system for managing monthly contract claims for lectur
 - HourlyRate (for lecturers)
 - Department
 - Claim counts
-```
+  
 
-### Authorization Levels
-- **Public**: Login page only
-- **Lecturer**: Dashboard, Create Claim, View Own Claims
-- **Programme Coordinator**: Approve Claims (First Level), View Pending
-- **Academic Manager**: Final Approval, Reports
-- **HR**: Full System Access, User Management, Reports
+Authorization Levels
+- Public: Login page only
+- Lecturer: Dashboard, Create Claim, View Own Claims
+- Programme Coordinator: Approve Claims (First Level), View Pending
+- Academic Manager: Final Approval, Reports
+- HR: Full System Access, User Management, Reports
 
-## 💻 Technology Stack
+Technology Stack
 
-- **Framework**: ASP.NET Core 6.0 MVC
-- **Database**: SQL Server with Entity Framework Core
-- **Authentication**: Cookie-based Authentication
-- **Session Management**: ASP.NET Core Session
-- **Frontend**: Bootstrap 5, Font Awesome, JavaScript
-- **Validation**: Data Annotations, jQuery Validation
+- Framework: ASP.NET Core 6.0 MVC
+- Database: SQL Server with Entity Framework Core
+- Authentication: Cookie-based Authentication
+- Session Management: ASP.NET Core Session
+- Frontend: Bootstrap 5, Font Awesome, JavaScript
+- Validation: Data Annotations, jQuery Validation
 
-## 📦 Installation & Setup
+Installation & Setup
 
-### Prerequisites
+Prerequisites
 - .NET 6.0 SDK or later
 - SQL Server 2019 or later
 - Visual Studio 2022 or VS Code
 
-### Steps
+Steps
 
-1. **Clone the Repository**
-   ```bash
+1. Clone the Repository
+   bash
    git clone https://github.com/yourusername/ContractMonthlyClaimSystem.git
    cd ContractMonthlyClaimSystem
-   ```
+   
 
-2. **Update Connection String**
+2. Update Connection String
    
    Edit `appsettings.json`:
    ```json
@@ -131,23 +131,23 @@ A comprehensive web-based system for managing monthly contract claims for lectur
    }
    ```
 
-3. **Run Database Migrations**
+3. Run Database Migrations
    ```bash
    dotnet ef database update
    ```
    
    Or the database will auto-create on first run.
 
-4. **Run the Application**
+4. Run the Application
    ```bash
    dotnet run
    ```
 
-5. **Access the Application**
+5. Access the Application
    
    Navigate to: `https://localhost:7xxx` (check console output)
 
-## 👥 Default Users (Seeded)
+Default Users (Seeded)
 
 | Username | Password | Role |
 |----------|----------|------|
@@ -156,11 +156,11 @@ A comprehensive web-based system for managing monthly contract claims for lectur
 | manager | managerpass | Academic Manager |
 | hdabaAc | password123 | Lecturer |
 
-**⚠️ Important**: Change these passwords immediately after first login in production!
+Important: Change these passwords immediately after first login in production!
 
-## 🔑 Key Features Demonstration
+Key Features Demonstration
 
-### 1. HR Creates User
+1. HR Creates User
 ```csharp
 // HR sets hourly rate during user creation
 var user = new User
@@ -174,7 +174,7 @@ var user = new User
 };
 ```
 
-### 2. Lecturer Submits Claim
+2. Lecturer Submits Claim
 ```csharp
 // Auto-calculation in view
 function calculateTotal() {
@@ -185,7 +185,7 @@ function calculateTotal() {
 }
 ```
 
-### 3. 180-Hour Validation
+3. 180-Hour Validation
 ```csharp
 // Server-side validation
 if (model.HoursWorked > 180)
@@ -196,7 +196,7 @@ if (model.HoursWorked > 180)
 }
 ```
 
-### 4. Session Validation
+4. Session Validation
 ```csharp
 // Every protected action checks session
 var sessionUser = HttpContext.Session.GetString("CurrentUser");
@@ -206,7 +206,7 @@ if (string.IsNullOrEmpty(sessionUser) || sessionUser != userId.ToString())
 }
 ```
 
-### 5. LINQ Report Generation
+5. LINQ Report Generation
 ```csharp
 // Example: Department summary using LINQ
 var departmentSummary = claims
@@ -223,9 +223,9 @@ var departmentSummary = claims
     .ToList();
 ```
 
-## 📊 Database Schema
+Database Schema
 
-### Users Table
+Users Table
 - UserId (PK)
 - Username
 - Name
@@ -238,7 +238,7 @@ var departmentSummary = claims
 - CreatedDate
 - LastLoginDate
 
-### Claims Table
+Claims Table
 - ClaimId (PK)
 - LecturerId (FK → Users)
 - ClaimPeriod
@@ -250,7 +250,7 @@ var departmentSummary = claims
 - SubmissionDate
 - FileData (Supporting document)
 
-### Approvals Table
+Approvals Table
 - ApprovalId (PK)
 - ClaimId (FK → Claims)
 - ApproverId (FK → Users)
@@ -258,7 +258,7 @@ var departmentSummary = claims
 - ApprovalDate
 - Comments
 
-## 🔄 Claim Workflow
+Claim Workflow
 
 ```
 1. Lecturer submits claim
@@ -272,45 +272,45 @@ var departmentSummary = claims
 5. HR can generate reports/invoices
 ```
 
-## ✅ PROG6212 Checklist Compliance
+PROG6212 Checklist Compliance
 
-### HR View
-- [x] HR added as "super user" role
-- [x] HR adds all users with complete information
-- [x] HR can update all user information
-- [x] HR can generate reports using LINQ
-- [x] Reports downloadable (HTML format)
-- [x] No public registration - HR creates all users
+HR View
+-  HR added as "super user" role
+-  HR adds all users with complete information
+-  HR can update all user information
+-  HR can generate reports using LINQ
+-  Reports downloadable (HTML format)
+-  No public registration - HR creates all users
 
-### Lecturer View
-- [x] Login implemented
-- [x] Hourly rate pulled from HR-set values
-- [x] Auto-calculation implemented (Hours × Rate)
-- [x] Validation for 180-hour maximum
-- [x] Entity Framework with database
-- [x] Track claims through approval process
+Lecturer View
+Login implemented
+-  Hourly rate pulled from HR-set values
+-  Auto-calculation implemented (Hours × Rate)
+-  Validation for 180-hour maximum
+-  Entity Framework with database
+-  Track claims through approval process
 
-### Admin Views (Separate)
-- [x] Programme Coordinator view
-- [x] Academic Manager view
-- [x] Custom login implemented
-- [x] **Sessions implemented throughout**
-- [x] **Authorization prevents unauthorized access**
+#Admin Views (Separate)
+-  Programme Coordinator view
+-  Academic Manager view
+-  Custom login implemented
+-  Sessions implemented throughout
+-  Authorization prevents unauthorized access
 
-### Version Control
-- [x] Regular commits to GitHub (10+ commits)
-- [x] Descriptive commit messages
+Version Control
+-  Regular commits to GitHub (10+ commits)
+-  Descriptive commit messages
 
-### Documentation
-- [x] README updated with Part 2 to Part 3 changes
-- [x] Key features documented
-- [x] Installation instructions included
+Documentation
+-  README updated with Part 2 to Part 3 changes
+-  Key features documented
+-  Installation instructions included
 
-## 🎥 Video Demonstration
+Video Demonstration
 
 [YouTube Link - Unlisted]
 
-**Video Contents**:
+Video Contents:
 1. HR creating new users (0:00-2:00)
 2. HR setting hourly rates (2:00-3:00)
 3. Lecturer login and claim submission (3:00-5:00)
@@ -322,36 +322,36 @@ var departmentSummary = claims
 9. Report generation (12:00-14:00)
 10. Unauthorized access prevention (14:00-15:00)
 
-## 🐛 Known Issues & Future Enhancements
+Known Issues & Future Enhancements
 
-### Current Limitations
+Current Limitations
 - PDF generation uses HTML format (can be enhanced with iTextSharp)
 - No email notifications (can be added with SMTP)
 - Basic file upload validation
 
-### Planned Enhancements
+Planned Enhancements
 - Email notifications for approvals
 - PDF generation with proper library
 - Advanced reporting with charts
 - Bulk user import from Excel
 - Export claims to Excel
 
-## 📝 Testing
+Testing
 
-### Test Scenarios
-1. **HR Functions**
+Test Scenarios
+1. HR Functions
    - Create user with all fields
    - Edit existing user
    - Activate/deactivate users
    - Reset passwords
 
-2. **Lecturer Functions**
+2. Lecturer Functions
    - Submit claim with auto-calculation
    - Test 180-hour validation
    - Upload supporting document
    - View claim status
 
-3. **Approval Workflow**
+3. Approval Workflow
    - Coordinator approval
    - Manager final approval
    - Claim rejection with comments
@@ -361,39 +361,39 @@ var departmentSummary = claims
    - Session expiration
    - Role-based restrictions
 
-5. **Reports**
+5. Reports
    - Monthly report generation
    - Lecturer performance report
    - LINQ query verification
 
-## 🤝 Contributing
+Contributing
 
 This is an academic project for PROG6212. For educational purposes only.
 
-## 📄 License
+ License
 
 This project is created for academic purposes as part of PROG6212 coursework.
 
-## 👨‍💻 Author
+Author
 
-**Your Name**
-- Student Number: XXXXXXXXX
-- Institution: Independent Institute of Education
+- Your Name: Muvhumbi Motseo
+- Student Number: st10055316
+- Institution: Independent Institute of Education Emeris
 - Module: PROG6212
-- Year: 2024
+- Year: 2025
 
-## 📞 Support
+Support
 
 For issues or questions:
 1. Check the documentation
 2. Review the video demonstration
-3. Contact: your.email@student.iie.ac.za
+3. Contact: st10055316@imconnect.edu.za
 
 ---
 
-## 🎓 Academic Integrity Statement
+Academic Integrity Statement
 
-This project represents original work completed for PROG6212. All code and documentation have been created by the author unless otherwise cited.
+This project represents original work completed for PROG6212. All code and documentation have been created.
 
-**Last Updated**: November 2024
-**Version**: 3.0 (Final POE)
+Last Updated: November 2025
+Version: 3.0 (Final POE)
