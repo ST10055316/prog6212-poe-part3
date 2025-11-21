@@ -33,6 +33,7 @@ Based on Lecturer Feedback:
    - Role-based access control implemented
    - Users cannot access unauthorized pages
    - Automatic redirection to login for unauthorized access
+   - HHGEHGWGVDFWSVGEDBV
 
 5. **Report Generation with LINQ**
    - Monthly claims reports using LINQ queries
@@ -44,6 +45,7 @@ Based on Lecturer Feedback:
    - EF Core with SQL Server
    - Code-First approach with automatic migrations
    - Database seeding with default users
+   - BEWHGVGHDVE
 
 Key Features (Part 3)
 
@@ -55,6 +57,7 @@ HR Dashboard (Super User)
 - Generate comprehensive reports using LINQ
 - Download reports (HTML format)
 - View system-wide statistics
+- JDGEWGFERH
 
 Lecturer Features
 - Auto-populated hourly rate from HR settings
