@@ -12,6 +12,7 @@ Based on Lecturer Feedback:
    - HR sets hourly rates for all lecturers
    - Public registration completely disabled
    - All users must be created by HR department
+   - GSWQCHFVGTGSCFASCCADS
 
 2. Lecturer View Enhancements
    - Hourly rate automatically pulled from HR-set values
@@ -19,6 +20,7 @@ Based on Lecturer Feedback:
    - Cannot manually edit hourly rate
    - Enhanced validation for 180-hour monthly maximum
    - Real-time calculation display
+   - JHEDSGDSFGFEWGBDSFBFJ
 
 3. Session Management 
    - Comprehensive session implementation throughout application
