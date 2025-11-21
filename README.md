@@ -46,33 +46,33 @@ Based on Lecturer Feedback:
 Key Features (Part 3)
 
 HR Dashboard (Super User)
-- ✅ Create new users with all details (name, email, hourly rate, etc.)
-- ✅ Edit existing user information
-- ✅ Activate/deactivate user accounts
-- ✅ Reset user passwords
-- ✅ Generate comprehensive reports using LINQ
-- ✅ Download reports (HTML format)
-- ✅ View system-wide statistics
+- Create new users with all details (name, email, hourly rate, etc.)
+- Edit existing user information
+- Activate/deactivate user accounts
+- Reset user passwords
+- Generate comprehensive reports using LINQ
+- Download reports (HTML format)
+- View system-wide statistics
 
 Lecturer Features
-- ✅ Auto-populated hourly rate from HR settings
-- ✅ Auto-calculation: Total = Hours × HR-set Rate
-- ✅ Maximum 180 hours per month validation
-- ✅ Track claims through approval workflow
-- ✅ View claim history and status
-- ✅ Upload supporting documents
+- Auto-populated hourly rate from HR settings
+- Auto-calculation: Total = Hours × HR-set Rate
+- Maximum 180 hours per month validation
+- Track claims through approval workflow
+- View claim history and status
+- Upload supporting documents
 
 Programme Coordinator Features
-- ✅ Review submitted claims
-- ✅ Approve/reject claims (first level)
-- ✅ Forward approved claims to Academic Manager
-- ✅ Session-based authentication
+- Review submitted claims
+- Approve/reject claims (first level)
+- Forward approved claims to Academic Manager
+- Session-based authentication
 
 Academic Manager Features
-- ✅ Final approval of claims
-- ✅ View all approved claims
-- ✅ Generate reports
-- ✅ Session-based authentication
+- Final approval of claims
+- View all approved claims
+- Generate reports
+- Session-based authentication
 
 Authentication & Authorization
 
