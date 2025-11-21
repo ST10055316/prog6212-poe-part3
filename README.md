@@ -12,7 +12,7 @@ Based on Lecturer Feedback:
    - HR sets hourly rates for all lecturers
    - Public registration completely disabled
    - All users must be created by HR department
-   - GSWQCHFVGTGSCFASCCADS
+     
 
 2. Lecturer View Enhancements
    - Hourly rate automatically pulled from HR-set values
@@ -20,7 +20,7 @@ Based on Lecturer Feedback:
    - Cannot manually edit hourly rate
    - Enhanced validation for 180-hour monthly maximum
    - Real-time calculation display
-   - JHEDSGDSFGFEWGBDSFBFJ
+   
 
 3. Session Management 
    - Comprehensive session implementation throughout application
@@ -33,7 +33,7 @@ Based on Lecturer Feedback:
    - Role-based access control implemented
    - Users cannot access unauthorized pages
    - Automatic redirection to login for unauthorized access
-   - HHGEHGWGVDFWSVGEDBV
+     
 
 5. **Report Generation with LINQ**
    - Monthly claims reports using LINQ queries
@@ -45,7 +45,7 @@ Based on Lecturer Feedback:
    - EF Core with SQL Server
    - Code-First approach with automatic migrations
    - Database seeding with default users
-   - BEWHGVGHDVE
+     
 
 Key Features (Part 3)
 
@@ -57,7 +57,7 @@ HR Dashboard (Super User)
 - Generate comprehensive reports using LINQ
 - Download reports (HTML format)
 - View system-wide statistics
-- JDGEWGFERH
+  
 
 Lecturer Features
 - Auto-populated hourly rate from HR settings
@@ -404,9 +404,7 @@ Last Updated: November 2025
 Version: 3.0 (Final POE)
 
 
-HBDSGDVBJDKFKJSDBGF
-NGDSBNSDGBSD
-NJBSDFBSHFSJHNSDF
+
 MNHJGDSVHSDVBDHGSDF
 MNSDHBFHJDSF
 
